@@ -1,9 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: auto;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -14,7 +19,7 @@ header {
     width: 100%;
     height: 80px;
     padding: 0px 125px 0px 54px;
-    position: absolute;
+    position: fixed;
     background-color: rgba(15, 4, 2, 0.300);
     backdrop-filter: blur(4px);
 }
@@ -114,7 +119,82 @@ header > img {
     background: linear-gradient(180deg, rgba(35, 16, 10, 0.00) 0%, #23100A 100%);
 }
 
-#test {
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     background-color: #23100A;
-    height: 654px;
+    padding: 45px 0px 0px 45px;
+}
+
+.about-us > div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us h1 {
+    font: 64px "Great Vibes";
+    color: #F49D25;
+}
+
+.about-us img {
+    height: 412px;
+    margin-top: auto;
+}
+
+.our-history {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+    gap: 12px;
+}
+
+.our-history h4 {
+    font: 24px "Inter";
+    color: #F49D25;
+}
+
+.our-history h3 {
+    font: 30px "Inria Serif";
+    color: #F49D25;
+}
+
+.our-history span {
+    font: 36px "Great Vibes";
+    color: #F49D25;
+}
+
+.our-history p {
+    width: 562px;
+    text-align: justify;
+    font: 24px "Montserrat";
+    color: #B89261;
+}
+
+.team-message {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 140px;
+    background-color: #391910;
+    border: 1px solid hsla(35, 90%, 55%, 0.400);
+    border-radius: 5px;
+    padding: 15px;
+    gap: 5px;
+}
+
+.team-message p {
+    font: 32px "Great Vibes";
+    color: #B89261;
+}
+
+
+#team-reference {
+    font: 16px "Inter";
+    color: #F49D25;
 }
