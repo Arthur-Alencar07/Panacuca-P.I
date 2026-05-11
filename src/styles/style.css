@@ -48,6 +48,7 @@ header > img {
 }
 
 .hero-header {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -116,6 +117,8 @@ header > img {
 }
 
 #gradient {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 155px;
     background: linear-gradient(180deg, rgba(35, 16, 10, 0.00) 0%, #23100A 100%);
