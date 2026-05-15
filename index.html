@@ -22,10 +22,10 @@
     <header>
         <img src="./src/assets/images/site-logo.svg" alt="site-logo">
         <nav class="header-nav">
-            <a href="">SOBRE</a>
+            <a href="#about-us">SOBRE</a>
             <a href="">EVENTOS</a>
             <a href="">PRATOS</a>
-            <a href="#about-us">LOCAL</a>
+            <a href="">LOCAL</a>
             <a href="">CARDÁPIO</a>
         </nav>
     </header>
@@ -37,19 +37,19 @@
         <h2>Cozinha e Vinho</h2>
         <p>Sabores autênticos, vinhos selecionados e uma experiência gastronômica inesquecível</p>
         <div class="btn-wrapper">
-            <button>Cardápio</button>
+            <button id="about-us">Cardápio</button>
             <button id="btn-secundary">Reservas</button>
         </div>
         <div id="gradient"></div>
     </section>
 
     <!-- about-us section -->
-    <section class="about-us" id="about-us">
+    <section class="about-us">
         <h1>Sobre Nós</h1>
         <div>
             <div class="our-history">
                 <h4>--- Nossa História</h4>
-                <h3>Uma paixão que virou <span>Tradição</span></h3>
+                <h3 >Uma paixão que virou <span>Tradição</span></h3>
                 <p>O Panacuca nasceu do amor pela boa mesa e pela arte de receber. Cada prato é uma celebração dos sabores mais autênticos, preparados com ingredientes selecionados e o carinho de quem faz da cozinha um lugar de encontro. 
                 <br><br>
                 Nosso espaço foi pensado para proporcionar momentos únicos — seja um jantar a dois à luz de velas, um almoço em família ou uma celebração especial entre amigos.</p>
@@ -63,6 +63,19 @@
             <img src="./src/assets/images/panela-background.png" alt="background-panela">
         </div>
     </section>
+
+    <!-- carousel section -->
+     <section class="carousel">
+        <div class="carousel-track">
+            <img src="./src/assets/images/sol-e-sabor-background.png" alt="background-carousel">
+            <img src="./src/assets/images/noite-italia-background.png" alt="background-carousel">
+            <img src="./src/assets/images/essencia-japao-background.png" alt="background-carousel">    
+        </div>
+        <div class="carousel-btn-wrapper">
+            <button><img src="./src/assets/images/arrow.svg" alt="left-arrow"></button>
+            <button id="right-carousel-btn"><img src="./src/assets/images/arrow.svg" alt="right-arrow"></button>
+        </div>
+     </section>
 </body>
 
 </html>
