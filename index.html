@@ -73,20 +73,94 @@
         </div>
      </section>
 
+     <!-- Lucas section -->
      <section class="pratos-populares">
-        <div>
-            <img src="./src/assets/images/pratos-populares-img.png" alt="background-panela">
-    
-            <div class="cards">
-                <img src="./src/assets/images/macarrao-penne-mediterrâneo.png" alt="Macarrão Penne Mediterrâneo" class="card-img">
-                <div class="textBox">
-                    <p class="head">Penne Mediterrâneo</p>
-                    <p class="discription">Massa artesanal com tomates cereja, manjericão fresco e azeite trufado.</p>
-                    <p class="price">R$ 64,00</p>
+    <div class="pratos-container">
+        <img src="./src/assets/images/pratos-populares-img.png" alt="background-panela" class="panela-decorativa">
+
+        <div class="carousel-cards-wrapper">
+            <button class="arrow-btn prev-btn" id="prev-prato">&#10094;</button>
+            
+            <div class="cards-window">
+                <div class="cards-track">
+                    
+                    <div class="cards">
+                        <img src="./src/assets/images/macarrao-penne-mediterrâneo.png" alt="Penne Mediterrâneo" class="card-img">
+                        <div class="textBox">
+                            <p class="head">Penne Mediterrâneo</p>
+                            <p class="discription">macarrão penne (tradicional ou integral), tomates frescos ou pelatti, azeitonas pretas, alho, cebola, manjericão e azeite de oliva extra virgem. </p>
+                            <p class="price">R$ 64,00</p>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <img src="./src/assets/images/frango-espeto.png" alt="Risoto de Cogumelos" class="card-img">
+                        <div class="textBox">
+                            <p class="head">Yakitori</p>
+                            <p class="discription">Cortes de frango, palitos de bambu, molho shoyu, mirin (saquê adocicado), saquê culinário e açúcar para caramelizar.</p>
+                            <!-- <p class="price">R$ 72,00</p> -->
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <img src="./src/assets/images/macarrao-penne-mediterrâneo.png" alt="Filet ao Molho Madeira" class="card-img">
+                        <div class="textBox">
+                            <p class="head">Filet Mignon</p>
+                            <p class="discription">Grelhado na manteiga de ervas, acompanhado de aligot de batata.</p>
+                            <p class="price">R$ 89,00</p>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <img src="./src/assets/images/macarrao-penne-mediterrâneo.png" alt="Salmão Grelhado" class="card-img">
+                        <div class="textBox">
+                            <p class="head">Salmão Crocante</p>
+                            <p class="discription">Posta de salmão com crosta de gergelim e redução de maracujá.</p>
+                            <p class="price">R$ 78,00</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
+            <button class="arrow-btn next-btn" id="next-prato">&#10095;</button>
         </div>
-    </section>
+    </div>
+
+    <script>
+        const track = document.querySelector('.cards-track');
+        const nextBtn = document.getElementById('next-prato');
+        const prevBtn = document.getElementById('prev-prato');
+        
+        const cardWidth = 380; // Largura exata do card
+        const totalCards = document.querySelectorAll('.cards-track .cards').length;
+        let currentIndex = 0;
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < totalCards - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Volta para o primeiro se chegar ao fim
+            }
+            updateSlidePosition();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalCards - 1; // Vai para o último se apertar voltar no primeiro
+            }
+            updateSlidePosition();
+        });
+
+        function updateSlidePosition() {
+            // Move a trilha horizontalmente multiplicando a largura do card pelo índice atual
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+    </script>
+</body>
+</section>
 </body>
 
 </html>

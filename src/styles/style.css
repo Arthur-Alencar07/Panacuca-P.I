@@ -279,6 +279,7 @@ header>img {
 }
 
 
+
 .pratos-populares {
     display: flex;
     flex-direction: column;
@@ -286,38 +287,66 @@ header>img {
     justify-content: center;
     width: 100%;
     background-color: #23100A;
-    padding: 45px 54px; 
+    padding: 80px 54px; 
 }
 
-.pratos-populares > div {
+.pratos-container {
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 1400px;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
-
-.pratos-populares > div > img {
+/* Imagem decorativa da esquerda */
+.panela-decorativa {
     margin: 0px 0px 0px -60px;
     max-height: 140vh;
     object-fit: contain;
+    flex-shrink: 1;
+}
+
+/* Wrapper que junta as setas e a janela dos cards */
+.carousel-cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Janela limitadora (SÓ mostra 1 card por vez) */
+.cards-window {
+    width: 380px; 
+    height: 470px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+/* Linha que segura todos os cards lado a lado */
+.cards-track {
+    display: flex;
+    flex-direction: row;
+    gap: 0px; 
+    transition: transform 0.5s ease-in-out; 
+    width: max-content;
 }
 
 
 .cards {
-    margin: 0px 350px 200px 0px;
     position: relative;
-    width: 380px;
+    flex-shrink: 0;
+    width: 380px; 
     height: 450px;
     border-radius: 35px;
     overflow: hidden; 
     transition: 0.3s ease-in-out;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    margin: 10px 0; 
 }
-
 
 .card-img {
     width: 100%;
@@ -326,7 +355,7 @@ header>img {
     transition: 0.3s ease-in-out;
 }
 
-
+/* Caixa de texto interna (Efeito Hover) */
 .textBox {
     position: absolute;
     inset: 0; 
@@ -336,7 +365,7 @@ header>img {
     align-items: start;
     justify-content: flex-end;
     padding: 25px;
-    background: linear-gradient(0deg, rgba(35, 16, 10, 0.9) 0%, rgba(35, 16, 10, 0.4) 70%, transparent 100%);
+    background: linear-gradient(0deg, rgba(35, 16, 10, 0.95) 0%, rgba(35, 16, 10, 0.4) 70%, transparent 100%);
     z-index: 5;
     transition: 0.3s ease-in-out;
 }
@@ -351,6 +380,7 @@ header>img {
     font: 14px "Montserrat", sans-serif;
     color: #ffffff;
     margin: 8px 0;
+    text-align: left;
 }
 
 .textBox > .price {
@@ -359,9 +389,9 @@ header>img {
     color: #F49D25;
 }
 
-
+/* Efeitos de Hover no Card */
 .cards:hover {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 
 .cards:hover > .textBox {
@@ -370,4 +400,22 @@ header>img {
 
 .cards:hover > .card-img {
     filter: blur(3px);
+}
+
+/* Estilização das Setas de Navegação */
+.arrow-btn {
+    background: transparent;
+    border: none;
+    color: #F49D25;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    user-select: none;
+    z-index: 6;
+}
+
+.arrow-btn:hover {
+    color: #ffffff;
+    transform: scale(1.2);
 }
