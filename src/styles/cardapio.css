@@ -1,0 +1,87 @@
+*{
+    scroll-behavior: smooth; 
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 0px 125px 0px 54px;
+  position: fixed;
+  background-color: rgba(15, 4, 2, 0.3);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+header > img {
+  height: 75px;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.header-nav a {
+  font: 18px "Montserrat";
+  color: #f49d25;
+  background-color: transparent;
+  transition: 0.6s;
+}
+
+.header-nav a:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.hero-cardapio {
+  background-image: url("/src/assets/images/background-img-banner-cardapio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.banner-cardapio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 233px 0px 0px 0px;
+  gap: 0px;
+}
+.banner-cardapio h1{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 0.9 !important;
+    font-family: "Inria Serif";
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.yellow {
+  color: #f49d25;
+  text-shadow: 0 4px 4px #000;
+  padding: 0px 148px;
+  
+}
+.white {
+  color: #ffffff;
+  text-shadow: 0 4px 4px #000;
+  padding: 0px 274px;
+}
+
+.btn-scroll {
+    position: absolute;
+    bottom: 25px; /* Distância fixa do chão da imagem [1] */
+    left: 50%; /* Joga para o meio da tela [1] */
+    transform: translateX(-50%); /* Garante centralização perfeita [1] */
+    z-index: 5;
+}
