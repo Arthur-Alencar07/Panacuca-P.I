@@ -26,7 +26,7 @@
             <a href="">EVENTOS</a>
             <a href="">PRATOS</a>
             <a href="">LOCAL</a>
-            <a href="">CARDÁPIO</a>
+            <a href="./cardapio.html">CARDÁPIO</a>
         </nav>
     </header>
 
@@ -73,10 +73,14 @@
         </div>
      </section>
 
-     <!-- Lucas section -->
+     <!-- Wrapper unificado: Pratos Populares + Onde Estamos com panela decorativa sobreposta -->
+     <div class="pratos-ondestamos-wrapper">
+
+        <!-- Panela decorativa: flutua sobre as duas sections -->
+        <img src="./src/assets/images/pratos-populares-img.png" alt="background-panela" class="panela-decorativa">
+
      <section class="pratos-populares">
     <div class="pratos-container">
-        <img src="./src/assets/images/pratos-populares-img.png" alt="background-panela" class="panela-decorativa">
 
         <div class="carousel-cards-wrapper">
             <button class="arrow-btn prev-btn" id="prev-prato">&#10094;</button>
@@ -98,7 +102,7 @@
                         <div class="textBox">
                             <p class="head">Yakitori</p>
                             <p class="discription">Cortes de frango, palitos de bambu, molho shoyu, mirin (saquê adocicado), saquê culinário e açúcar para caramelizar.</p>
-                            <!-- <p class="price">R$ 72,00</p> -->
+                            <p class="price">R$ 72,00</p>
                         </div>
                     </div>
 
@@ -132,7 +136,7 @@
         const nextBtn = document.getElementById('next-prato');
         const prevBtn = document.getElementById('prev-prato');
         
-        const cardWidth = 380; // Largura exata do card
+        const cardWidth = 400; // 380px card + 20px gap
         const totalCards = document.querySelectorAll('.cards-track .cards').length;
         let currentIndex = 0;
 
@@ -140,7 +144,7 @@
             if (currentIndex < totalCards - 1) {
                 currentIndex++;
             } else {
-                currentIndex = 0; // Volta para o primeiro se chegar ao fim
+                currentIndex = 0;
             }
             updateSlidePosition();
         });
@@ -149,18 +153,61 @@
             if (currentIndex > 0) {
                 currentIndex--;
             } else {
-                currentIndex = totalCards - 1; // Vai para o último se apertar voltar no primeiro
+                currentIndex = totalCards - 1;
             }
             updateSlidePosition();
         });
 
         function updateSlidePosition() {
-            // Move a trilha horizontalmente multiplicando a largura do card pelo índice atual
             track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         }
     </script>
-</body>
-</section>
-</body>
 
+</section>
+
+<!-- Onde Estamos section -->
+<section class="onde-estamos-section">
+    <div class="onde-estamos">
+                    <div class="info-texto">
+                        <h2>Onde Estamos</h2>
+                        
+                        <div class="item-contato">
+                            <img src="" alt="">
+                            <div class="detalhes">
+                                <h3>Endereço</h3>
+                                <p>R. São José do Rio Preto, 801 - Conj. Hab. Brg.<br>Faria Lima, São Paulo - SP, 04840-460</p>
+                            </div>
+                        </div>
+
+                        <div class="item-contato">
+                            <img src="" alt="">
+                            <div class="detalhes">
+                                <h3>Horário</h3>
+                                <p>Segunda a Terça: Fechado<br>Quarta à Quinta: 17:00-23:00<br>Sexta à Sábado: 17:00-23:30<br>Domingo: 17:00-23:00</p>
+                            </div>
+                        </div>
+
+                        <div class="item-contato">
+                            <img src="" alt="">
+                            <div class="detalhes">
+                                <h3>Contatos</h3>
+                                <p>(11) 97854-3039<br>@panacucabr</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- fundo com a imagem e gradiente integrando o Mapa -->
+                    <div class="imagem-fundo-local">
+                        <div class="mapa-container">
+                            <!-- mapa do google com iframe -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.750067151923!2d-46.68352302378272!3d-23.75629046878425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce49a7ff8958fd%3A0x53604250b3d7ec13!2sPanacuca!5e0!3m2!1spt-BR!2sbr!4v1779491998895!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</section>
+
+</div> <!-- fim .pratos-ondestamos-wrapper -->
+
+</body>
 </html>

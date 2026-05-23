@@ -280,47 +280,65 @@ header>img {
 
 
 
+/* =========================================
+   WRAPPER UNIFICADO: Pratos + Onde Estamos
+   ========================================= */
+.pratos-ondestamos-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #23100A;
+    overflow: hidden;
+}
+
+/* Panela decorativa: cobre só a seção de Pratos Populares, termina no topo do "Onde Estamos" */
+.panela-decorativa {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    height: 70%; /* altura aproximada da section Pratos Populares */
+    width: auto;
+    object-fit: contain;
+    object-position: top left;
+    z-index: 2;
+    pointer-events: none;
+}
+
 .pratos-populares {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 100%;
-    background-color: #23100A;
-    padding: 80px 54px; 
+    background-color: transparent;
+    padding: 80px 60px 40px 0px;
+    overflow: visible;
+    min-height: 620px;
 }
 
 .pratos-container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 1400px;
-    justify-content: space-between;
+    max-width: 100%;
+    justify-content: flex-end;
     align-items: center;
     gap: 20px;
-}
-
-/* Imagem decorativa da esquerda */
-.panela-decorativa {
-    margin: 0px 0px 0px -60px;
-    max-height: 140vh;
-    object-fit: contain;
-    flex-shrink: 1;
+    position: relative;
 }
 
 /* Wrapper que junta as setas e a janela dos cards */
 .carousel-cards-wrapper {
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    flex-grow: 1;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-/* Janela limitadora (SÓ mostra 1 card por vez) */
+/* Janela limitadora (mostra 2 cards por vez) */
 .cards-window {
-    width: 380px; 
+    width: 780px; 
     height: 470px; 
     overflow: hidden; 
     position: relative;
@@ -330,7 +348,7 @@ header>img {
 .cards-track {
     display: flex;
     flex-direction: row;
-    gap: 0px; 
+    gap: 20px; 
     transition: transform 0.5s ease-in-out; 
     width: max-content;
 }
@@ -418,4 +436,96 @@ header>img {
 .arrow-btn:hover {
     color: #ffffff;
     transform: scale(1.2);
+}
+
+/* --- ESTILOS DA SEÇÃO ONDE ESTAMOS --- */
+.onde-estamos-section {
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 3; /* acima da panela para o texto não ser coberto */
+}
+
+.onde-estamos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+    padding: 60px 0 60px 60px; /* padding normal, sem depender da panela */
+    gap: 40px;
+}
+
+.info-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    min-width: 350px; /* Garante que os textos não sejam esmagados */
+}
+
+.info-texto h2 {
+    font: 42px "Inria Serif", serif;
+    color: #F49D25;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.info-texto h2::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #F49D25;
+    margin-top: 5px;
+}
+
+.item-contato {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.icone-dourado {
+    margin-top: 2px;
+}
+
+.detalhes h3 {
+    font: 22px "Inria Serif", serif;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-underline-offset: 4px;
+}
+
+.detalhes p {
+    font: 14px "Montserrat", sans-serif;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Área que comporta o fundo do restaurante e centraliza o mapa sobre ela */
+.imagem-fundo-local {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Faz esse lado ocupar o restante da tela */
+    min-height: 500px;
+    /* Atenção: troque o caminho url() se o nome do seu arquivo do interior do restaurante for outro */
+    background-image: linear-gradient(90deg, #23100A 0%, rgba(35, 16, 10, 0.4) 40%, transparent 100%), url("../assets/images/restaurant-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mapa-container {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    z-index: 2;
 }
