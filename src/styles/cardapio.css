@@ -1,5 +1,5 @@
-*{
-    scroll-behavior: smooth; 
+* {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -38,6 +38,8 @@ header > img {
   color: #ffffff;
 }
 
+/* HERO-HEADER DO CARDÁPIO */
+
 .hero-cardapio {
   background-image: url("/src/assets/images/background-img-banner-cardapio.png");
   background-size: cover;
@@ -55,22 +57,21 @@ header > img {
   padding: 233px 0px 0px 0px;
   gap: 0px;
 }
-.banner-cardapio h1{
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    line-height: 0.9 !important;
-    font-family: "Inria Serif";
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.banner-cardapio h1 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 0.9 !important;
+  font-family: "Inria Serif";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .yellow {
   color: #f49d25;
   text-shadow: 0 4px 4px #000;
   padding: 0px 148px;
-  
 }
 .white {
   color: #ffffff;
@@ -79,9 +80,147 @@ header > img {
 }
 
 .btn-scroll {
-    position: absolute;
-    bottom: 25px; /* Distância fixa do chão da imagem [1] */
-    left: 50%; /* Joga para o meio da tela [1] */
-    transform: translateX(-50%); /* Garante centralização perfeita [1] */
-    z-index: 5;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+/* SEÇÃO INICIAL DO CARDAPIO */
+
+#secao-fritos {
+  background-color: #23100a;
+  color: #f49d25;
+
+  display: flex;
+  flex-direction: column;
+}
+.botoes-cardapio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.btn-cardapio {
+  background-color: #391910;
+  border: 2px solid #391910;
+  width: 124px;
+  height: 110px;
+  border-radius: 24px;
+  transition: 0.6s;
+}
+.btn-cardapio:hover {
+  background-color: transparent;
+  border: 2px solid #f49d25;
+  color: #f49d25;
+}
+
+.titulo-e-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.titulo-e-btn h2 {
+  margin-top: 37px;
+  text-align: center;
+  font-family: "Inria Serif";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.texto-divisor{
+  padding: 80px 350px 0px 120px;
+}
+
+.garcom-img {
+  margin-right: 80px;
+}
+
+.botoes-cardapio h1 {
+  font-family: "Inria Serif";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* FIM DA SEÇÃO INICIAL DO CARDÁPIO */
+
+/* ESTILO DOS CARDS */
+
+.card-item {
+  width: 350px;
+  height: 550px;
+  background: #391910;
+  border-radius: 24px;
+  border: 4px solid rgba(244, 157, 37, 0.28);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* Corta a imagem nas pontas arredondadas */
+
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+  transform: scale(1.04);
+}
+
+/* Ajuste padrão para a imagem não quebrar */
+.card-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Espaçamento interno dos textos */
+.card-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-titulo {
+  width: 294px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card-descricao {
+  width: 281px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.card-preco {
+  width: 137px;
+  color: #f49d25;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.cards-container-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  padding: 74px 120px 0px 120px;
+}
+
+.card-foto {
+  border-bottom: 2px solid #f49d25;
 }

@@ -33,6 +33,8 @@
       </nav>
     </header>
 
+    <!-- HERO HEADER CARDAPIO -->
+
     <section class="hero-cardapio">
       <div class="banner-cardapio">
         <h1>
@@ -40,13 +42,167 @@
           <span class="white">O MOMENTO</span>
         </h1>
       </div>
-      <a href="#secao-cardapio" class="btn-scroll">
+      <a href="#secao-fritos" class="btn-scroll">
         <img src="/src/assets/images/btn-scroll.svg" alt="btn-scroll" />
       </a>
     </section>
 
-    <section id="secao-cardapio">
+    <!-- CARDÁPIO DE FRITOS -->
+
+    <section id="secao-fritos">
+      <div class="secoes-cardapio">
+        <div class="botoes-cardapio">
+
+          <h1 class="texto-divisor">Fritos</h1>
+
+          <div class="titulo-e-btn">
+            <h2>Fritos</h2>
+            <button
+              class="btn-cardapio"
+              onclick="
+                document
+                  .getElementById('secao-fritos')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              <img
+                src="./src/assets/images/frito-icon-btn.svg"
+                alt="icone de fritos"
+              />
+            </button>
+          </div>
+
+          <div class="titulo-e-btn">
+            <h2>Do mar</h2>
+            <button
+              class="btn-cardapio"
+              onclick="
+                document
+                  .getElementById('secao-do-mar')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              <img
+                src="./src/assets/images/fish-icon-btn.svg"
+                alt="icone de peixes"
+              />
+            </button>
+          </div>
+
+          <div class="titulo-e-btn">
+            <h2>Pastas</h2>
+            <button
+              class="btn-cardapio"
+              onclick="
+                document
+                  .getElementById('secao-pastas')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              <img
+                src="./src/assets/images/pasta-icon-btn.svg"
+                alt="icone de pastas"
+              />
+            </button>
+          </div>
+
+          <div class="titulo-e-btn">
+            <h2>Bebidas</h2>
+            <button
+              class="btn-cardapio"
+              onclick="
+                document
+                  .getElementById('secao-bebidas')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              <img
+                src="./src/assets/images/bebida-icon-btn.svg"
+                alt="icone de bebidas"
+              />
+            </button>
+          </div>
+
+          <img
+            class="garcom-img"
+            src="./src/assets/images/garcom1-vetor.svg"
+            alt="garçom segurando bandeja de fritos"
+          />
+        </div>
+      </div>
+      
+      <div class="cards-container-1">
+
+        <!-- CARD 1 -->
+        <div class="card-item">
+         
+          <div class="card-foto">
+            <img
+              src="./src/assets/images/imagens-cardapio/rolinho-pimavera.svg"
+              alt="Rolinho Primavera"
+            />
+          </div>
+
+       
+          <div class="card-info">
+            <h3 class="card-titulo">ROLINHO PRIMAVERA</h3>
+            <p class="card-descricao">
+              Carne seca com queijo, Tradicional (Frango ou Cury), Mussarela ou
+              Romeu e Julieta.
+            </p>
+            <span class="card-preco">R$ 11,90</span>
+          </div>
+        </div>
+        <!-- CARD 2 -->
+        <div class="card-item">
+         
+          <div class="card-foto">
+            <img
+              src="./src/assets/images/imagens-cardapio/rolinho-pimavera.svg"
+              alt="Rolinho Primavera"
+            />
+          </div>
+
+          <div class="card-info">
+            <h3 class="card-titulo">YAKITORI</h3>
+            <p class="card-descricao">
+              Filé de frango marinado com especiarias empanado e frito servido com molho tarê e cebolinha verde.
+            </p>
+            <span class="card-preco">R$ 9,90</span>
+          </div>
+        </div>
+        <!-- CARD 3 -->
+        <div class="card-item">
+          
+          <div class="card-foto">
+            <img
+              src="./src/assets/images/imagens-cardapio/rolinho-pimavera.svg"
+              alt="Rolinho Primavera"
+            />
+          </div>
+
         
+          <div class="card-info">
+            <h3 class="card-titulo">ESPETO DE CAMARÃO</h3>
+            <p class="card-descricao">
+              Camarões selecionados e marinados no alho e ervas. Grelhados na hora e servidos com limão
+            </p>
+            <span class="card-preco">R$ 16,90</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="secao-do-mar">
+      <h1 class="texto-divisor">Do mar</h1>
+    </section>
+
+    <section id="secao-pastas">
+      <h1 class="texto-divisor">Pastas</h1>
+    </section>
+
+    <section id="secao-bebidas">
+      <h1 class="texto-divisor">Bebidas</h1>
     </section>
   </body>
 </html>
