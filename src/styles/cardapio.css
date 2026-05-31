@@ -151,6 +151,82 @@ header > img {
 
 /* FIM DA SEÇÃO INICIAL DO CARDÁPIO */
 
+.texto-divisor{
+  font-family: "Inria Serif";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+hr{
+width: 1132.005px;
+height: 1px;
+background-color: #f49d25;
+}
+
+/*INICIO SEÇÃO DO MAR*/
+
+#secao-do-mar{
+  background-color: #23100a;
+  color: #f49d25;
+}
+#secao-do-mar .titulo-secao-direita {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%; 
+  padding: 0 40px; 
+  gap: 100px;
+}
+
+#secao-do-mar .garcom-img {
+  margin-right: 0; 
+}
+
+
+#secao-do-mar .texto-divisor {
+  padding: 0;
+  margin-left: auto; 
+  text-align: right; 
+}
+
+
+#secao-do-mar .cards-container-1{
+ padding: 20px 120px 0px 120px;
+}
+
+/*FIM DA SEÇÃO DO MAR*/
+
+/*INICIO DA SEÇÃO PASTAS*/
+
+#secao-pastas{
+  background-color: #23100a;
+  color: #f49d25;
+}
+
+#secao-pastas .titulo-secao-direita {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%; 
+  padding: 0 40px; 
+  gap: 100px;
+}
+
+#secao-pastas .garcom-img {
+  margin-right: 0; 
+}
+
+
+#secao-pastas .texto-divisor {
+  padding: 0;
+  margin-left: auto; 
+  text-align: right; 
+}
+
 /* ESTILO DOS CARDS */
 
 .card-item {
@@ -169,7 +245,6 @@ header > img {
   transform: scale(1.04);
 }
 
-/* Ajuste padrão para a imagem não quebrar */
 .card-item img {
   width: 100%;
   height: auto;
@@ -212,15 +287,58 @@ header > img {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  
+}
+.card-foto {
+  border-bottom: 2px solid #f49d25;
 }
 
 .cards-container-1 {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  
+  padding: 20px 120px 0px 120px;
+}
+
+#secao-fritos .cards-container-1{
+padding: 74px 120px 0px 120px;
+}
+.cards-container-2{
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
   padding: 74px 120px 0px 120px;
 }
 
-.card-foto {
-  border-bottom: 2px solid #f49d25;
+.card-lista{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-lista .card-preco{
+  color: #F49D25;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+display: flex;
+justify-content: flex-end;
+}
+
+.card-lista span{
+  color: #ffffff;
+  font-size: 20px;
+}
+
+li{
+  display: flex;
+
 }
