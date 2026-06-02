@@ -24,7 +24,7 @@ O projeto foi desenvolvido utilizando as tecnologias fundamentais da web, sem a 
 Para rodar este projeto na sua máquina localmente, siga os passos abaixo:
 
 1. Clone este repositório:
-   git clone https://github.com/SEU-USUARIO/panacuca.git
+   git clone https://github.com/Arthur-Alencar07/Panacuca-P.I.git
 
 2. Navegue até a pasta do projeto:
    cd panacuca
