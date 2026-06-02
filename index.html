@@ -20,12 +20,14 @@
 <body>
     <!-- header-component -->
     <header>
-        <img src="./src/assets/images/site-logo.svg" alt="site-logo">
+        <a href="./" id="btn-home">
+            <img src="./src/assets/images/site-logo.svg" alt="site-logo">
+        </a>
         <nav class="header-nav">
             <a href="#about-us">SOBRE</a>
-            <a href="">EVENTOS</a>
-            <a href="">PRATOS</a>
-            <a href="">LOCAL</a>
+            <a href="#events-carousel">EVENTOS</a>
+            <a href="#pratos-populares">PRATOS</a>
+            <a href="#localizacao">LOCAL</a>
             <a href="./cardapio.html">CARDÁPIO</a>
         </nav>
     </header>
@@ -69,6 +71,7 @@
     </section>
 
     <!-- carousel section -->
+     <section class="carousel" id="events-carousel">
     <section class="carousel">
         <div class="carousel-track">
             <div><img src="./src/assets/images/sol-e-sabor-background.png" alt="background-carousel"></div>
@@ -83,7 +86,7 @@
         <!-- Panela decorativa: flutua sobre as duas sections -->
         <img src="./src/assets/images/pratos-populares-img.png" alt="background-panela" class="panela-decorativa">
 
-        <section class="pratos-populares">
+        <section class="pratos-populares" id="pratos-populares">
             <div class="pratos-container">
 
                 <div class="carousel-cards-wrapper">

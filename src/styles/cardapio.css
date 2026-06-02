@@ -16,8 +16,20 @@ header {
   z-index: 10;
 }
 
-header > img {
+#btn-home {
   height: 75px;
+}
+
+#btn-home img {
+  height: 75px;
+  transition: 2s;
+}
+
+#btn-home:hover {
+
+  img {
+      transform: rotateY(360deg);
+  }
 }
 
 .header-nav {
