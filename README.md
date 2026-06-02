@@ -35,14 +35,25 @@ Para rodar este projeto na sua máquina localmente, siga os passos abaixo:
 
 PANACUCA-P.I/
 ├── src/
-│   ├── assets/
+
+│ ├── assets/
+
 │   │   └── images/
+
 │   │       ├── imagens-cardapio/
+
 │   │       └── (vários ficheiros de imagens, ícones SVG e fundos)
+
 │   ├── styles/
+
 │   │   ├── cardapio.css
+
 │   │   ├── reset.css
+
 │   │   └── style.css
+
 │   ├── cardapio.html
+
 │   └── index.html
+
 └── README.md
