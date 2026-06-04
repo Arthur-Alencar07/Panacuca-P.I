@@ -143,11 +143,11 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #23100A;
+    background-color: rgb(35, 16, 10);
     padding: 45px 0px 0px 45px;
 }
 
-.about-us>div {
+.about-us > div {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -155,62 +155,30 @@ header {
     align-items: center;
 }
 
-.about-us h1 {
-    font: 64px "Great Vibes";
-    color: #F49D25;
-}
-
 .about-us img {
     height: 412px;
     margin-top: auto;
 }
 
-.our-history {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 45px;
-    gap: 12px;
-}
-
-.our-history h4 {
-    font: 24px "Inter";
-    color: #F49D25;
-}
-
-.our-history h3 {
-    font: 30px "Inria Serif";
-    color: #F49D25;
-}
-
-.our-history span {
-    font: 36px "Great Vibes";
-    color: #F49D25;
-}
-
-.our-history p {
-    width: 562px;
-    text-align: justify;
-    font: 24px "Montserrat";
-    color: #B89261;
-}
-
 .team-message {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 140px;
+    width: 700px;
+    min-height: 140px;
     background-color: #391910;
     border: 1px solid hsla(35, 90%, 55%, 0.400);
     border-radius: 5px;
-    padding: 15px;
-    gap: 5px;
+    padding: 50px;
+    gap: 20px;
+    margin-left: 150px;
 }
 
 .team-message p {
     font: 32px "Great Vibes";
     color: #B89261;
+    text-align: justify;
+    word-spacing: 5px;
 }
-
 
 #team-reference {
     font: 16px "Inter";
